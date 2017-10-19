@@ -1,0 +1,60 @@
+import mongoose from 'mongoose'
+const Schema = mongoose.Schema
+
+export default mongoose.model('mepProject', new Schema({ 
+  name: {
+    type: String,
+    default: '',
+    required: 'Please fill name'
+  },
+  director: {
+    type: String,
+    default: '',
+    required: 'Please fill director'
+  },
+  type: {
+    type: String,
+    default: '',
+    required: 'Please fill type'
+  },
+  city: {
+    type: String,
+    default: '',
+    required: 'Please fill city'
+  },
+  state: {
+    type: String,
+    default: '',
+    required: 'Please fill state'
+  },
+  postal_address: {
+    type: String,
+    default: '',
+    required: 'Please fill postaladdress'
+  },
+  est_date: {
+    type: Date, 
+    required: 'Please fill established date'
+  },
+  email: {
+    type: String,
+    default: '',
+    required: 'Please fill email',
+    unique: true,
+    trim: true
+  },
+  phone: {
+    type: String,
+    default: '',
+    required: 'Please fill phone',
+    trim: true
+  },
+  created: {
+    type: Date,
+    default: Date.now
+  },
+  createdByUserId: {
+    type: String,
+    required: 'Please fill the id of the user who is creating this'
+  }
+}))
