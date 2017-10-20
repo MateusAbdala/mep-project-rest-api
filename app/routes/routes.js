@@ -11,18 +11,18 @@ import {
 const routes   = express.Router() 
 
 // List Projects
-routes.get('/Project', listProjects)
+routes.get('/project', listProjects)
 
 //Create Project
-routes.post('/Project', createProject)
+routes.post('/project', createProject)
 
 //View Project
-routes.get('/Project/:ProjectId', viewProject)
+routes.get('/project/:projectId', viewProject)
 
 //Edit Project
-routes.patch('/Project/:ProjectId', updateProject)
+routes.patch('/project/:projectId', updateProject)
 
 //Delete Project
-routes.delete('/Project/:ProjectId', deleteProject)
+routes.delete('/project/:projectId', deleteProject)
 
 export default routes;
