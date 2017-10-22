@@ -5,7 +5,8 @@ import MepProject from '../models/MepProject'
 export function createProject(req, res){
 	if(validateRequest(req, res)){
 		var newMepProject = new MepProject({
-        name: req.body.name
+				name: req.body.name,
+				description: req.body.description
       });
 
       newMepProject.save((err) => {

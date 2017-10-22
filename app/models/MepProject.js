@@ -6,5 +6,10 @@ export default mongoose.model('MepProject', new Schema({
     type: String,
     default: '',
     required: 'Please fill name'
+  },
+  description: {
+    type: String,
+    default: '',
+    required: 'Please fill description'
   }
 }))
